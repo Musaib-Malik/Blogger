@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogger</title>
+  </head>
+  <body>
+    <%- include("./partials/_header.ejs") %> <%-
+    include("./partials/_add_btn.ejs") %>
+    <div class="container">
+      <h3
+        style="
+          font-weight: 600;
+          font-family: Poppins;
+          text-decoration: underline;
+          margin-bottom: 3rem;
+        "
+      >
+        Dashboard
+      </h3>
+
+      <h6 style="font-family: Montserrat">Welcome <%= name %></h6>
+
+      <% if (blogs.length > 0) { %>
+      <table class="striped" style="margin-top: 2rem">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% blogs.forEach(blog => { %>
+          <tr>
+            <td>
+              <a id="title" href="/blogs/<%= blog._id %> "
+                ><%= blog.title %>
+              </a>
+            </td>
+            <td id="created-at">
+              <%= formatDate(blog.createdAt, 'MMMM Do YYYY') %>
+            </td>
+            <td><span class="dash-status status"><%= blog.status %> </span></td>
+            <td>
+              <a href="/blogs/edit/<%= blog._id %>" class="btn btn-float edit"
+                ><i class="fa fa-edit"></i
+              ></a>
+
+              <form
+                action="/blogs/delete/<%= blog._id %>?_method=DELETE"
+                method="POST"
+              >
+                <button class="btn del red" type="submit">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <% } else{ %>
+      <p
+        style="
+          padding-top: 2rem;
+          display: inline-block;
+          font-family: Poppins;
+          font-weight: 600;
+        "
+      >
+        You have not created any stories
+      </p>
+      <% } %>
+    </div>
+  </body>
+</html>

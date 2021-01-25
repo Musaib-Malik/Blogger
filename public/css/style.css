@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+
+p {
+  margin: 10px 0 !important;
+}
+
+.login-container {
+  width: 400px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.login-container h3 {
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+.lead {
+  font-family: montserrat;
+}
+
+.fa-small {
+  font-size: 16px !important;
+}
+
+.login-container a {
+  font-family: Poppins;
+  font-weight: 570;
+}
+
+.btn-float {
+  float: left;
+  margin-right: 10px;
+}
+
+.img-small {
+  width: 180px;
+}
+
+#add-story {
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+input,
+select {
+  font-family: Montserrat;
+}
+
+#title {
+  font-family: Poppins;
+  color: royalblue;
+}
+
+#created-at {
+  font-family: poppins;
+}
+
+.del,
+.edit {
+  background: none !important;
+  box-shadow: none;
+}
+
+.del:hover,
+.edit:hover {
+  background: none !important;
+  box-shadow: none;
+}
+
+.fa-edit {
+  color: darkslateblue;
+}
+
+.fa-trash {
+  color: red;
+  background: none;
+  padding: 0;
+  outline: none;
+}
+
+.status {
+  font-family: Poppins;
+}
+
+#user-blogs {
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+#blog-title {
+  font-family: Montserrat;
+  font-weight: 700;
+}
+
+#read-more-btn {
+  font-family: poppins;
+  font-weight: 600;
+  text-transform: capitalize;
+  box-shadow: none !important;
+  border-radius: 4px;
+}
+
+#date {
+  font-family: POppins;
+  font-size: 20px;
+  text-decoration: underline;
+  margin-bottom: 1.4rem;
+}
+
+#blog-owner {
+  font-family: Poppins;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+#more {
+  font-family: poppins;
+  text-transform: capitalize;
+}
+
+#btn-update,
+#btn-cancel {
+  box-shadow: none !important;
+  text-transform: capitalize;
+  font-family: Poppins !important;
+  font-weight: 700;
+}
